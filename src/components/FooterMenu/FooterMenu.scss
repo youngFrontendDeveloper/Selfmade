@@ -1,0 +1,46 @@
+@import "../../scss/variables";
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  padding: 0 1px 0 15px;
+  list-style: none;
+
+  @media screen and (min-width: $width-desktop) {
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+.footer-menu__item {
+  width: 100%;
+  text-align: center;
+
+  @media screen and (min-width: $width-575) {
+    width: max-content;
+  }
+}
+
+//.footer-menu__item:not(:last-of-type) {
+//  margin-right: 20px;
+//}
+
+.footer-menu__link {
+  width: 100%;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: $color-white;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-violet-hover;
+  }
+
+
+}

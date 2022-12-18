@@ -1,0 +1,84 @@
+@import "../../scss/variables";
+
+.statistics {
+  display: block;
+  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 17px;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+  overflow-x: scroll;
+
+  @media screen and (min-width: $width-tablet) {
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: $width-desktop) {
+    width: 934px;
+    margin-bottom: 79px;
+  }
+}
+
+.statistics__head {
+  background-color: $color-violet;
+}
+
+.statistics__row {
+  background-color: $color-row-bg;
+
+  &:nth-child(even) {
+    background-color: $color-row-bg-even;
+  }
+}
+
+.statistics__cell {
+  padding: 16px 21px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-text;
+  text-align: center;
+
+  &:first-child {
+    width: 70%;
+    text-align: left;
+  }
+
+  &:not(:last-of-type) {
+    border-right: 1px solid #fff;
+  }
+
+  &--title {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:first-child {
+      color: $color-statistics-title;
+      font-size: 20px;
+      line-height: 106%;
+    }
+  }
+}
+
+.statistics__date {
+  width: 104px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 106%;
+  color: $color-statistics-title;
+  text-decoration: underline;
+  border: none;
+  border-bottom: 1px solid $color-statistics-title;
+  background-color: $color-violet;
+}
+
+.statistics__date::-webkit-calendar-picker-indicator {
+  //color: $color-statistics-title;
+  display: none;
+}

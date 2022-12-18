@@ -1,0 +1,53 @@
+@import "../../scss/variables";
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+
+  &--reverse {
+    flex-direction: row-reverse;
+    cursor: auto;
+  }
+
+  @media screen and (min-width: $width-tablet){
+    cursor: auto;
+  }
+
+}
+
+
+.user__name {
+  color: $color-text;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 106%;
+}
+
+.user__firstName--big {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 106%;
+  color: $color-text;
+}
+
+.user__lastName {
+  order: -1;
+
+  &--big {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 106%;
+    color: $color-text;
+  }
+}
+
+.user__img {
+  display: block;
+  border-radius: 50%;
+
+  &--big {
+    margin-right: 16px;
+  }
+}

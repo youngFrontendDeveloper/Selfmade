@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  width: 176.38px;
+  height: 30.29px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $width-tablet){
+    margin-bottom: 36.46px;
+  }
+}
+
+.social__icon {
+  width: 29.54px;
+  height: 29.54px;
+}
+
+.telegram, .vk, .facebook, .instagram  {
+  fill: $color-violet;
+
+  &:hover {
+    fill: $color-violet-hover;
+    cursor: pointer;
+  }
+}
+

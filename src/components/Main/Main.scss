@@ -1,0 +1,12 @@
+@import "../../scss/variables";
+
+.main {
+  flex-grow: 1;
+}
+
+.main__container {
+  @media screen and (min-width: $width-tablet) {
+    padding-left: 266px;
+  }
+
+}

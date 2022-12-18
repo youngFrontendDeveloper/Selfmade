@@ -1,0 +1,148 @@
+@import "../../scss/variables";
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 17px;
+  padding: 29px 20px 28px 20px;
+  box-sizing: border-box;
+  background-color: $color-block-background;
+  border-radius: 15px;
+
+
+  @media screen and (min-width: $width-tablet) {
+    width: 270px;
+  }
+}
+
+.chart__title {
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-text;
+}
+
+.chart__img-wrap {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.chart-img {
+  position: relative;
+  z-index: 2;
+}
+
+.unit {
+  transition: 1s stroke-dashoffset ease-out;
+}
+
+.unit__title-bg {
+  display: none;
+  align-items: center;
+  text-align: center;
+  width: 90px;
+  height: 32px;
+  background-color: $color-respect-hover;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.unit__title {
+  font-weight: 400;
+  font-size: 0;
+  line-height: 134%;
+  fill: $color-white;
+
+}
+
+.unit, .unit--bg {
+  fill: none;
+  fill-opacity: 0;
+  stroke-width: 11;
+  //transition: stroke-dashoffset 0.35s;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+  cursor: pointer;
+
+  &:hover ~ .unit__title-bg {
+    display: flex;
+    opacity: 1;
+  }
+
+  &:hover ~ .unit__title {
+    font-size: 8px;
+  }
+}
+
+
+//.chart-img:hover .unit {
+//  animation: dash 2s linear forwards;
+//}
+
+
+@keyframes dash {
+
+  0% {
+    //stroke-dashoffset: 0;
+    stroke-dasharray: 0 0;
+  }
+}
+
+//.unit:hover + .unit__title-bg {
+//  display: flex;
+//  opacity: 1;
+//}
+
+.chart__result {
+  position: absolute;
+  top: 78px;
+  left: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart__result-day {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-pink;
+
+}
+
+.chart__result-month {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 37px;
+  color: $color-violet;
+}
+
+.chart__result-year {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-respect-year;
+}
+
+.chart__filled {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-violet;
+}
+
+.chart__total {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.51px;
+  text-align: center;
+  color: #717171;
+}
