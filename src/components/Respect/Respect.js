@@ -1,29 +1,23 @@
 import "./Respect.scss";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import User from "../User/User";
-// import { respect } from "../../variables/respect";
-// import Radium from "radium";
+import { UserContext } from "../../contexts/userContext";
 
 function Respect() {
-  // const [ bgColor, setBgColor ] = useState( "" );
+  const { firstName, lastName, avatar, avatar2 } = useContext( UserContext );
   const [ free, setFree ] = useState( 40 );
-  const height = "71";
-  const width = "71";
-  const userClass = "user user--reverse respect__user";
-  const firstNameClass = "user__name user__firstName user__firstName--big";
-  const lastNameClass = "user__name user__lastName user__lastName--big";
-  const imgClass = "user__img user__img--big";
-  // const styles = {
-  //   "::-webkit-slider-thumb": {
-  //     width: "50px"
-  //   }
-  // };
+
 
   return (
     <div className="respect">
       <div className="respect__user-block">
-        <User height={ height } width={ width } userClass={ userClass } firstNameClass={ firstNameClass }
-              lastNameClass={ lastNameClass } imgClass={ imgClass }/>
+        <User
+          isBig
+          firstName={ firstName }
+          lastName={ lastName }
+          avatar={ avatar }
+          avatar2={ avatar2 }
+        />
         <p className="respect__top">топ</p>
       </div>
       <div className="respect__result">
@@ -63,6 +57,6 @@ function Respect() {
   );
 }
 
-export default  Respect ;
+export default Respect;
 
 

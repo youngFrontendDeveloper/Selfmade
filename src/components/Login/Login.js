@@ -1,46 +1,32 @@
 import "./Login.scss";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ReactComponent as Notifications } from "./img/notifications.svg";
 import User from "../User/User";
 import Management from "../Management/Management";
-import { user } from "../../variables/user";
+
+import { UserContext } from "../../contexts/userContext";
+
 
 function Login() {
-  const [ isLogin, setLogin ] = useState( true );
-  const [ isNotification, setNotification ] = useState( true );
-  const width = "46";
-  const height = "46";
-  const userClass = "user";
-  const firstNameClass = "user__name user__firstName";
-  const lastNameClass = "user__name user__lastName";
+  const { firstName, lastName, avatar, avatar2 } = useContext( UserContext );
 
-  const cropText = (text) => {
-    return ( text.slice( 0, 1 ) + "." );
-  };
+  const [ isNotification, setNotification ] = useState( true );
 
 
   return (
     <div className="login">
-      {/*{ isLogin ?*/}
-      {/*  <>*/}
-          <div className="notification">
-            <Notifications className="notification__img"/>
-            { isNotification && <div className="notification__point"/> }
-          </div>
-          <User
-            width={ width }
-            height={ height }
-            firstNameClass={ firstNameClass }
-            lastNameClass={ lastNameClass }
-            userClass={ userClass }
-            cropText={ cropText }
-          />
-          <Management/>
 
-        {/*</>*/}
-      {/* : <p className="login__text">*/}
-      {/*  Войти*/}
-      {/*</p> }*/}
+      <div className="notification">
+        <Notifications className="notification__img"/>
+        { isNotification && <div className="notification__point"/> }
+      </div>
+      <User
+        firstName={ firstName }
+        lastName={ lastName }
+        avatar={ avatar }
+        avatar2={ avatar2 }
+      />
+      <Management/>
 
 
     </div>
