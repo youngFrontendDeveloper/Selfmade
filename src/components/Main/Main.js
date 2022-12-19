@@ -8,7 +8,6 @@ function Main() {
   return (
     <main className="main">
       <div className="container container--wrap main__container">
-
         <Respect/>
         <Chart />
         <Statistics/>

@@ -1,19 +1,19 @@
 import "./Date.scss";
 import "react-datepicker/dist/react-datepicker.css";
-import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
 
-function Date() {
-  // const [ startDate, setStartDate ] = useState( 01.12.22 );
+function SelectDate({ selected, setStartDate, placeholderText,  }) {
 
-  // return (
-  //   <DatePicker className="statistics__date"
-  //               dateFormat="dd.MM.yy"
-  //               selected={ startDate }
-  //               onChange={ (date) => setStartDate( date ) }
-  //   />
-  // );
+  return (
+    <DatePicker className="statistics__date"
+                dateFormat="dd.MM.yy"
+                selected={ selected }
+                onChange={ (date) => setStartDate( date ) }
+                placeholderText={ placeholderText }
+                calendarStartDay={ 1 }
+    />
+  );
 }
 
-export default Date;
+export default SelectDate;

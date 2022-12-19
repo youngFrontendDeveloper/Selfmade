@@ -65,8 +65,9 @@
   }
 }
 
+
 .statistics__date {
-  width: 104px;
+  width: 73px;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
@@ -74,11 +75,24 @@
   color: $color-statistics-title;
   text-decoration: underline;
   border: none;
-  border-bottom: 1px solid $color-statistics-title;
   background-color: $color-violet;
+  outline: transparent;
+  cursor: pointer;
 }
 
-.statistics__date::-webkit-calendar-picker-indicator {
-  //color: $color-statistics-title;
-  display: none;
+.statistics__date::placeholder {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 106%;
+  color: $color-statistics-title;
+  text-decoration: underline;
+}
+
+.react-datepicker-wrapper {
+  width: max-content !important;
+}
+
+.react-datepicker-popper {
+  z-index: 9 !important;
 }

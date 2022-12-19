@@ -1,0 +1,114 @@
+@import "../../scss/variables";
+
+.notification__wrap {
+  position: relative;
+  //display: flex;
+  //flex-direction: column;
+
+}
+
+.notification__icon {
+  display: flex;
+  margin-right: 11px;
+  cursor: pointer;
+}
+
+.notification__point {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $color-pink;
+}
+
+.notification__text-block {
+  position: absolute;
+  top: 53px;
+  right: 0;
+  width: 90vw;
+  padding: 10px;
+  background-color: $color-row-bg-even;
+  box-sizing: border-box;
+  border: 1px solid rgba($color-text-light, 0.2);
+  border-radius: 15px;
+  z-index: 15;
+
+  @media screen and (min-width: $width-tablet) {
+    width: 70vw;
+    padding: 20px;
+  }
+
+
+}
+
+.notification__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $color-text;
+    transform: rotate(45deg);
+
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $color-text;
+    transform: rotate(-45deg);
+  }
+}
+
+.notification__icon:hover + .notification__text-block {
+  display: block;
+}
+
+.notification__item {
+  margin-bottom: 15px;
+  padding-left: 40px;
+  list-style: none;
+
+
+}
+
+.notification__text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: $color-text;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: $color-violet;
+  }
+}
+
+.notification__date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: $color-text;
+}
