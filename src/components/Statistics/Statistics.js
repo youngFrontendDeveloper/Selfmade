@@ -1,12 +1,14 @@
 import "./Statistics.scss";
 import React, { useState } from "react";
 import { statistics } from "../../variables/statictics";
-// import Date from "../Date/Date";
-import DatePicker from "react-datepicker";
-
+import SelectDate from "../Date/Date";
 
 function Statistics() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [ startDate, setStartDate ] = useState( null );
+  const [ endDate, setEndDate ] = useState( null );
+  const placeholderFrom = "01.12.22";
+  const placeholderTo = "08.12.22";
+
 
   return (
 
@@ -14,12 +16,17 @@ function Statistics() {
       <thead>
       <tr className="statistics__head">
         <td className="statistics__cell statistics__cell--title">Статистика с &nbsp;
-          {/*<Date/>*/}
-          <DatePicker className="statistics__date"
-                      dateFormat="dd.MM.yy"
-                      selected={ startDate }
-                      onChange={ (date) => setStartDate( date ) }
+
+          <SelectDate selected={ startDate } setStartDate={ setStartDate }
+                      placeholderText={ placeholderFrom }
           />
+
+          &nbsp; по &nbsp;
+
+          <SelectDate selected={ endDate } setStartDate={ setEndDate }
+                      placeholderText={ placeholderTo }/>
+
+
         </td>
         <td className="statistics__cell statistics__cell--title">Пользователи</td>
         <td className="statistics__cell statistics__cell--title">Анонимы</td>

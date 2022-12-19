@@ -17,16 +17,3 @@
   font-weight: 500;
   border-radius: 8px;
 }
-
-.notification {
-  display: flex;
-  margin-right: 11px;
-  cursor: pointer;
-}
-
-.notification__point {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: $color-pink;
-}

@@ -7,7 +7,6 @@
 }
 
 .react-datepicker__input-container > input {
-  width: 74px;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
@@ -16,4 +15,8 @@
   text-decoration: underline;
   border: none;
   background-color: #5D5FEF;
+}
+
+.react-datepicker__tab-loop {
+  display: inline-block;
 }

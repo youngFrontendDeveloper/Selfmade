@@ -1,15 +1,12 @@
 import "./Chart.scss";
-import React, { useState, useEffect } from "react";
-import { respect as respectRaw } from "../../variables/respect";
+import React, { useState, useEffect, useContext } from "react";
+import { SelfmadeRespectContext } from "../../contexts/selfmadeRespectContext";
+import { SRDataContext } from "../../contexts/SRData";
 
 function Chart() {
   const [ isMounted, setMounted ] = useState( false );
-  const [ respect, setRespect ] = useState( respectRaw );
-  const [ total, setTotal ] = useState( 134 );
-  const [ filled, setFilled ] = useState( 74 );
-  const [ forMonth, setForMonth ] = useState( 935 );
-  const [ forDay, setForDay ] = useState( 10 );
-  const [ forYear, setForYear ] = useState( 17849 );
+  const { selfmadeRespect: respect, setSelfmadeRespect: setRespect } = useContext(SelfmadeRespectContext);
+  const {total, filled, forDay, forMonth, forYear,} = useContext(SRDataContext);
 
   const calculateLengthOfCircle = (radius) => {
     return radius * 2 * Math.PI;
@@ -29,15 +26,11 @@ function Chart() {
   };
 
   useEffect( () => {
-    setRespect( respectRaw );
-  }, [ respectRaw ] );
-
-  useEffect( () => {
     setMounted( true );
   }, [] );
 
   return (
-    <div className="chart">
+    <section className="chart">
       <h3 className="chart__title">Ваш SR</h3>
       <div className="chart__img-wrap">
         <svg className="chart-img" width="230" height="230" viewBox="0 0 240 240">
@@ -87,7 +80,7 @@ function Chart() {
         </p>
       </div>
       <p><span className="chart__filled">{ filled }</span>/<span className="chart__total">{ total }</span></p>
-    </div>
+    </section>
   );
 }
 
