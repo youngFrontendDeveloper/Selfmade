@@ -1,12 +1,12 @@
 import "./Chart.scss";
 import React, { useState, useEffect, useContext } from "react";
 import { SelfmadeRespectContext } from "../../contexts/selfmadeRespectContext";
-import { SRDataContext } from "../../contexts/SRData";
+
 
 function Chart() {
   const [ isMounted, setMounted ] = useState( false );
-  const { selfmadeRespect: respect, setSelfmadeRespect: setRespect } = useContext(SelfmadeRespectContext);
-  const {total, filled, forDay, forMonth, forYear,} = useContext(SRDataContext);
+  const { selfmadeRespect, srData: {total, filled, forDay, forMonth, forYear,} } = useContext( SelfmadeRespectContext );
+  const [ respect, setRespect ] = useState( selfmadeRespect );
 
   const calculateLengthOfCircle = (radius) => {
     return radius * 2 * Math.PI;
@@ -29,6 +29,10 @@ function Chart() {
     setMounted( true );
   }, [] );
 
+  useEffect( () => {
+    setRespect( selfmadeRespect );
+  }, [ selfmadeRespect ] );
+
   return (
     <section className="chart">
       <h3 className="chart__title">Ваш SR</h3>
@@ -36,8 +40,8 @@ function Chart() {
         <svg className="chart-img" width="230" height="230" viewBox="0 0 240 240">
           { respect.map( (item, i) => {
             let radius = 50.5 + item.index * 16;
-            const lengthOfCircle = calculateLengthOfCircle( radius )
-            const progressOffset = calculateProgress( item.meaning, radius, lengthOfCircle )
+            const lengthOfCircle = calculateLengthOfCircle( radius );
+            const progressOffset = calculateProgress( item.meaning, radius, lengthOfCircle );
             return (
               <g key={ `bg-${ item.title }` } onMouseOver={ handleMouseOver( i ) }>
                 <circle className="unit--bg"
