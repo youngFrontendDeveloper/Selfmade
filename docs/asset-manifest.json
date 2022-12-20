@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.13d8b033.css",
-    "main.js": "./static/js/main.708a575e.js",
+    "main.css": "./static/css/main.1ded10da.css",
+    "main.js": "./static/js/main.639262de.js",
     "static/media/Gilroy-Medium.woff": "./static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
     "static/media/Gilroy-Bold.woff": "./static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
     "static/media/Gilroy-Semibold.woff": "./static/media/Gilroy-Semibold.5b042906a8b58ec4633e.woff",
@@ -26,11 +26,11 @@
     "static/media/portfolio.svg": "./static/media/portfolio.d8d21d3ad97a092e9e56b67136cf9e2a.svg",
     "static/media/level.svg": "./static/media/level.24d92454743426e0baa84afca37230b9.svg",
     "static/media/premium.svg": "./static/media/premium.b42c1b64c5b6a07e34468ba0f2f5322e.svg",
-    "main.13d8b033.css.map": "./static/css/main.13d8b033.css.map",
-    "main.708a575e.js.map": "./static/js/main.708a575e.js.map"
+    "main.1ded10da.css.map": "./static/css/main.1ded10da.css.map",
+    "main.639262de.js.map": "./static/js/main.639262de.js.map"
   },
   "entrypoints": [
-    "static/css/main.13d8b033.css",
-    "static/js/main.708a575e.js"
+    "static/css/main.1ded10da.css",
+    "static/js/main.639262de.js"
   ]
 }

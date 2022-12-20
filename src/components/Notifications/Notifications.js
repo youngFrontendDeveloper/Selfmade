@@ -37,7 +37,7 @@ function Notifications() {
                 notifications.map( item => {
 
                     return (
-                      <li className="notification__item">
+                      <li className="notification__item" key={ item.id }>
                         <p className="notification__text">{ item.text }</p>
                         <time dateTime={ item.time } className="notification__date">{ item.time }</time>
                       </li>

@@ -10,7 +10,6 @@
   font-size: 19px;
   line-height: 23px;
   color: $color-text;
-
 }
 
 .respect__disk-block {
@@ -29,10 +28,20 @@
   color: $color-text-light;
 }
 
-.respect__disk-input-wrap {
+.respect__disk-indicator-wrap {
   position: relative;
   width: 100%;
   max-width: 398px;
+  height: 15px;
+  background-color: $color-respect-ranger;
+  border-radius: 63px;
+}
+
+.respect__disk-indicator {
+  display: block;
+  height: 100%;
+  background-color: $color-violet;
+  border-radius: 63px;
 }
 
 .respect__disk-meaning {
@@ -42,39 +51,9 @@
   color: $color-text;
 }
 
-.respect__disk-input {
-  position: relative;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  //max-width: 398px;
-  height: 15px;
-  border-radius: 63px;
-  overflow: hidden;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    background-color: $color-violet;
-    border-radius: 63px;
-    box-shadow: -207px 0px 0px 200px $color-violet;
-  }
-
-  &::-webkit-slider-runnable-track {
-    background-color: $color-respect-ranger;
-    border-radius: 63px;
-  }
-
-}
-
 .respect__disk-link {
   position: absolute;
-  top: 5px;
+  top: 0;
   right: 2%;
   font-weight: 600;
   font-size: 11px;
@@ -86,5 +65,4 @@
     right: 20px;
     font-size: 12px;
   }
-
 }
