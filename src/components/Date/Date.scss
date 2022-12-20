@@ -3,6 +3,7 @@
 }
 
 .react-datepicker-popper {
+  margin-left: -17px;
   z-index: 15;
 }
 
@@ -19,4 +20,27 @@
 
 .react-datepicker__tab-loop {
   display: inline-block;
+}
+
+.react-datepicker__month {
+  margin: 0.3rem !important;
+  text-align: center;
+}
+
+.react-datepicker__month-container {
+  width: 100% !important;
+}
+
+.react-datepicker {
+  width: 98% !important;
+}
+
+.react-datepicker__month {
+  width: 98% !important;
+}
+
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+  width: 1.5rem !important;
+  line-height: 1.5rem !important;
+  margin: 0.15rem !important;
 }

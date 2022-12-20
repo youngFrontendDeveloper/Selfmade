@@ -2,9 +2,13 @@
 
 .logo {
   display: block;
-  width: 120px;
+  width: 100px;
   height: 17.52px;
   padding: 5px 1.38px;
+
+  @media screen and (min-width: $width-575){
+    width: 120px;
+  }
 
   &--big {
     width: 100%;

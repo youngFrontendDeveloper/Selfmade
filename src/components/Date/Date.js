@@ -2,7 +2,6 @@ import "./Date.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 
-
 function SelectDate({ selected, setStartDate, placeholderText,  }) {
 
   return (

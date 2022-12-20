@@ -2,9 +2,6 @@
 
 .notification__wrap {
   position: relative;
-  //display: flex;
-  //flex-direction: column;
-
 }
 
 .notification__icon {
@@ -23,8 +20,9 @@
 .notification__text-block {
   position: absolute;
   top: 53px;
-  right: 0;
+  right: -135.54px;
   width: 90vw;
+  max-width: $width-tablet;
   padding: 10px;
   background-color: $color-row-bg-even;
   box-sizing: border-box;
@@ -78,9 +76,13 @@
   display: block;
 }
 
+.notification__list {
+  padding-left: 0;
+}
+
 .notification__item {
   margin-bottom: 15px;
-  padding-left: 40px;
+  //padding-left: 40px;
   list-style: none;
 
 
@@ -90,6 +92,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-right: 40px;
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
@@ -98,7 +101,7 @@
   &::before {
     content: "";
     display: inline-block;
-    width: 10px;
+    min-width: 10px;
     height: 10px;
     margin-right: 10px;
     border-radius: 50%;

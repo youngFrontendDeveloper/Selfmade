@@ -17,9 +17,15 @@
 
   &:hover {
     right: 0;
-    top: 46px;
+    top: 40px;
     opacity: 1;
     visibility: visible;
+  }
+
+  @media screen and (min-width: $width-575) {
+    &:hover {
+      top: 46px;
+    }
   }
 
   @media screen and (min-width: $width-tablet) {
@@ -47,9 +53,13 @@
 
 .user:hover ~ .management {
   right: 0;
-  top: 46px;
+  top: 40px;
   opacity: 1;
   visibility: visible;
+
+  @media screen and (min-width: $width-575) {
+    top: 46px;
+  }
 
   @media screen and (min-width: $width-tablet) {
     top: 67px;
@@ -114,6 +124,7 @@
   box-sizing: border-box;
   list-style: none;
 
+
   &:not(:last-of-type) {
     margin-bottom: 2.25px;
   }
@@ -150,23 +161,28 @@
   color: $color-pink;
 }
 
+.management__item-active .icon2,
+.management__item-active .icon3,
+.management__item-active .icon4,
+.management__item-active .icon5,
+.management__item-active .icon7 {
+  stroke: $color-pink;
+}
+
+.management__item-active .icon1,
+.management__item-active .icon8 {
+  fill: $color-pink;
+}
+
 .management__icon {
 
   &--stroke {
     stroke: $color-text;
   }
 
-  &--stroke-active {
-    stroke: $color-pink;
-  }
-
   &--fill {
     fill: $color-text;
   }
-  &--fill-active {
-    fill: $color-pink;
-  }
-
 }
 
 .icon1 {
@@ -222,7 +238,6 @@
   height: 20px;
   margin-right: 12px;
 }
-
 
 .management__link {
   text-decoration: none;

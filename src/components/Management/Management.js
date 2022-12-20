@@ -11,10 +11,11 @@ import { ReactComponent as UserIcon } from "./img/user-icon.svg";
 import { ReactComponent as Out } from "./img/out.svg";
 
 function Management() {
+
   return (
     <section className="management">
       <ul className="management__list ">
-        <li className="management__item management__item-active">
+        <li className="management__item  management__item-active">
           <UserIcon className="management__icon management__icon--fill  icon1" width="16"
                     height="18"/>
           <a className="management__link" href="#">Управление</a>
@@ -43,7 +44,7 @@ function Management() {
           <Premium className="management__icon management__icon--stroke icon7" width="20" height="16"/>
           <a className="management__link" href="#">Премиум</a>
         </li>
-        <li className="management__item item7">
+        <li className="management__item item7 ">
           <Support className="management__icon management__icon--fill icon8" width="20" height="19"/>
           <a className="management__link" href="#">Поддержка</a>
         </li>

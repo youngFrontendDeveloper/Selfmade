@@ -1,0 +1,32 @@
+@import "../../scss/variables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: $width-desktop;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $width-tablet) {
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: $width-desktop) {
+    padding: 0 0;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--position-relative {
+    position: relative;
+  }
+}

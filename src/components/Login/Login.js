@@ -5,7 +5,6 @@ import Management from "../Management/Management";
 import { UserContext } from "../../contexts/userContext";
 import Notifications from "../Notifications/Notifications";
 
-
 function Login() {
   const { firstName, lastName, avatar, avatar2 } = useContext( UserContext );
 
@@ -19,7 +18,7 @@ function Login() {
         avatar={ avatar }
         avatar2={ avatar2 }
       />
-      <Management/>
+      <Management />
 
 
     </div>

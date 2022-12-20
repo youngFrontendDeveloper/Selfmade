@@ -3,13 +3,14 @@
 .respect {
   width: 100%;
   margin-bottom: 17px;
-  padding: 16px 26px 24px 21px;
+  padding: 10px 10px 12px 10px;
   background: $color-block-background;
   border-radius: 15px;
   box-sizing: border-box;
 
   @media screen and (min-width: $width-tablet) {
     width: calc(100% - 290px);
+    padding: 16px 26px 24px 21px;
   }
 
   @media screen and (min-width: $width-desktop) {
@@ -28,13 +29,18 @@
   &::before {
     content: "";
     position: absolute;
-    left: -21px;
+    left: -10px;
     right: 0;
     bottom: 0;
-    width: calc(100% + 21px + 26px);
+    width: calc(100% + 20px);
     height: 1px;
     background-color: $color-black;
     opacity: 0.1;
+
+    @media screen and (min-width: $width-tablet) {
+      left: -21px;
+      width: calc(100% + 46px);
+    }
   }
 
 }

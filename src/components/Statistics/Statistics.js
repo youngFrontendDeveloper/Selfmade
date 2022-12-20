@@ -1,9 +1,10 @@
 import "./Statistics.scss";
-import React, { useState } from "react";
-import { statistics } from "../../variables/statictics";
+import React, { useState, useContext } from "react";
 import SelectDate from "../Date/Date";
+import { StatisticsContext } from "../../contexts/statisticsContext";
 
 function Statistics() {
+  const { statistics } = useContext( StatisticsContext );
   const [ startDate, setStartDate ] = useState( null );
   const [ endDate, setEndDate ] = useState( null );
   const placeholderFrom = "01.12.22";
@@ -37,10 +38,13 @@ function Statistics() {
       {
         statistics.map( item =>
           <tr className="statistics__row">
-            <td className="statistics__cell">{ item.title }</td>
-            <td className="statistics__cell">{ item.user }</td>
-            <td className="statistics__cell">{ item.anonymous }</td>
-            <td className="statistics__cell">{ item.all }</td>
+           <td className="statistics__cell">{ item.title }</td>
+            { item.user !== 0 ? <td className="statistics__cell">{ item.user } </td> :
+              <td className="statistics__cell"><span className="statistics__cell-null">x</span></td> }
+            { item.anonymous !== 0 ? <td className="statistics__cell">{ item.anonymous } </td> :
+              <td className="statistics__cell"><span className="statistics__cell-null">x</span></td> }
+            { item.all !== 0 ? <td className="statistics__cell">{ item.all } </td> :
+              <td className="statistics__cell"><span className="statistics__cell-null">x</span></td> }
           </tr>
         )
       }

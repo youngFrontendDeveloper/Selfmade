@@ -11,7 +11,7 @@
     cursor: auto;
   }
 
-  @media screen and (min-width: $width-tablet){
+  @media screen and (min-width: $width-tablet) {
     cursor: auto;
   }
 
@@ -46,8 +46,23 @@
 .user__img {
   display: block;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  @media screen and (min-width: $width-575) {
+    width: 46px;
+    height: 46px;
+  }
 
   &--big {
-    margin-right: 16px;
+    width: 50px;
+    height: 50px;
+    margin-right: 4px;
+
+    @media screen and (min-width: $width-575) {
+      width: 71px;
+      height: 71px;
+      margin-right: 16px;
+    }
   }
 }

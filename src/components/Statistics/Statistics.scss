@@ -65,6 +65,12 @@
   }
 }
 
+.statistics__cell-null {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-light-grey;
+}
 
 .statistics__date {
   width: 73px;

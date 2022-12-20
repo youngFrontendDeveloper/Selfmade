@@ -1,4 +1,5 @@
 @import "./scss/fonts.scss";
+@import "./scss/variables.scss";
 
 body, h1, h2, h3, h4, ul, li, p, input {
   margin: 0;
@@ -16,35 +17,4 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: $width-desktop;
-  margin: 0 auto;
-  padding: 0 10px;
-  box-sizing: border-box;
-
-  @media screen and (min-width: $width-tablet) {
-    padding: 0 20px;
-  }
-
-  @media screen and (min-width: $width-desktop) {
-    padding: 0;
-  }
-
-  &--align-center {
-    align-items: center;
-  }
-
-  &--wrap {
-    flex-wrap: wrap;
-  }
-
-  &--position-relative {
-    position: relative;
-  }
 }
